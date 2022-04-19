@@ -1,0 +1,246 @@
+/* Paleta de colores:
+https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500*/
+
+:root {
+    --main-red: #E76F51;
+    --main-darkblue: #264653;
+    --main-green: #2A9D8F;
+    --main-orange: #F4A261;
+    --main-yellow: #E9C46A;
+}
+
+/*CSS del loading*/
+
+svg{
+    width: 30%;
+    height: 30%;
+}
+.rotate-45{
+    transform-origin: center;
+    transform: rotate(45deg)
+}
+.rotate{
+    transform-origin: center;
+    animation: rotate 1s ease-in-out infinite;
+}
+.rotate-back{
+    transform-origin: center;
+    animation: rotate 1s ease-in-out infinite;
+    animation-direction: reverse;
+}
+.left{
+    animation: move 1s ease-in-out infinite;
+}
+.right{
+    animation: move 1s ease-in-out infinite;
+}
+​
+@keyframes rotate{
+    100%{
+        transform: rotate(calc(90deg + 45deg))
+    }
+}
+@keyframes move{
+    50%{
+        transform: translate(-30px,-30px)
+    }
+}
+
+/*fin css loading*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: inherit;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.4;
+    flex-direction: column;
+    color: whitesmoke;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+h1, h2 {
+    font-weight: 700;
+    text-align: center;
+}
+
+h1  {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4.2rem;
+}
+.navbar {
+    display: flex;
+    position: fixed;
+    background: var(--main-red);
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 2px rgb(0 0 0 / 40%);
+}
+
+.navbar a {
+    padding: 20px;
+    display: block;
+    font-weight: 550;
+    font-size: 1.5rem;
+}
+
+.navbar a:hover{
+    background: var(--main-darkblue);
+
+}
+
+.nav-list {
+    display: flex;
+}
+@media (max-width: 400px) {
+    .nav-list {
+        display: block;
+    }
+    #welcome-section {
+        height: 1000px;
+    }
+}
+
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background: var(--main-darkblue);
+    color: whitesmoke;
+}
+
+@media (max-width: 400px) {
+    .nav-list {
+        display: block;
+    }
+}
+
+#welcome-section #welcome-header {
+    color: var(--main-red);
+    font-size: 3rem;
+}
+
+#welcome-section p {
+    padding: 50px;
+    font-size: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+
+.project-tile:hover {
+    box-shadow: 0 0px 11px rgba(33,33,33,.5);
+}
+
+.project-section {
+    text-align: center;
+    padding-top: 10rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background: var(--main-green);
+}
+
+.project-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-darkblue);
+}
+
+
+.project {
+    background: var(--main-darkblue);
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+    border-radius: 50px;
+}
+
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+}
+
+.loading   {
+    font-size: 3rem;
+}
+
+#contacto {
+    background: var(--main-yellow);
+    text-align: center;
+    color: var(--main-darkblue);
+    padding: 20px;
+}
+
+
+#contacto .seccion-contacto-links {
+    padding: 20px;
+}
+
+#contacto a {
+    color: var(--main-darkblue);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    display: inline-block;
+}
+
+.contact-details:hover {
+    transform: translateY(8px);
+    transition: transform 0.3s ease-out;
+}
+
+
+.icon {
+    max-width: 30px;
+    max-height: 30px;
+}
